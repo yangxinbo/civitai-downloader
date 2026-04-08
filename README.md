@@ -15,7 +15,7 @@ API key.  You can create the API key as follows:
 ## Installation
 
 ```bash
-curl -L https://raw.githubusercontent.com/ashleykleynhans/civitai-downloader/main/download.py -o /usr/local/bin/download-model
+curl -L https://raw.githubusercontent.com/yangxinbo/civitai-downloader/main/download.py -o /usr/local/bin/download-model
 chmod +x /usr/local/bin/download-model
 ```
 
@@ -49,10 +49,10 @@ download-model 46846 /workspace/stable-diffusion-webui/models/Stable-diffusion
 
 ## Community and Contributing
 
-Pull requests and issues on [GitHub](https://github.com/ashleykleynhans/civitai-downloader)
+Pull requests and issues on [GitHub](https://github.com/yangxinbo/civitai-downloader)
 are welcome. Bug fixes and new features are encouraged.
 
 ## Appreciate my work?
 
-<a href="https://www.buymeacoffee.com/ashleyk" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+如果你喜欢这个项目，可以请我喝杯咖啡。
 
