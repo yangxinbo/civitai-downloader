@@ -104,7 +104,7 @@ def download_file(model_id: str, output_path: str, token: str):
             if not filename:
                 raise Exception('Unable to determine filename')
 
-        response = urllib.request.urlopen(redirect_url)
+        response = urllib.request.urlopen(urllib.request.Request(redirect_url, headers=headers))
     elif response.status == 404:
         raise Exception('File not found')
     else:
