@@ -15,8 +15,8 @@ API key.  You can create the API key as follows:
 ## Installation
 
 ```bash
-curl -L https://raw.githubusercontent.com/yangxinbo/civitai-downloader/main/download.py -o /usr/local/bin/download-model
-chmod +x /usr/local/bin/download-model
+sudo curl -L https://raw.githubusercontent.com/yangxinbo/civitai-downloader/main/download.py -o /usr/local/bin/download-model
+sudo chmod +x /usr/local/bin/download-model
 ```
 
 > [!NOTE]
