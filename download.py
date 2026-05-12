@@ -108,7 +108,7 @@ def download_file(model_id: str, output_path: str, token: str):
     elif response.status == 404:
         raise Exception('File not found')
     else:
-        raise Exception('No redirect found, something went wrong')
+        raise Exception(f'No redirect found, something went wrong (HTTP {response.status})')
 
     total_size = response.getheader('Content-Length')
 
