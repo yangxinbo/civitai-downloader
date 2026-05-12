@@ -13,7 +13,7 @@ CHUNK_SIZE = 1638400
 TOKEN_FILE = Path.home() / '.civitai' / 'config'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 DEFAULT_ENV_NAME = os.getenv("CIVITAI_TOKEN_NAME", "CIVITAI_TOKEN")
-CIVITAI_BASE_URL = 'https://civitai.com/api/download/models'
+CIVITAI_BASE_URL = 'https://civitai.red/api/download/models'
 
 
 def get_args():
