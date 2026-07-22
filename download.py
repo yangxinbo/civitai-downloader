@@ -86,6 +86,8 @@ def download_file(model_id: str, output_path: str, token: str):
             base_url = urlparse(url)
             redirect_url = f"{base_url.scheme}://{base_url.netloc}{redirect_url}"
 
+        print(f'Download URL: {redirect_url}')
+
         # Extract filename from the redirect URL
         parsed_url = urlparse(redirect_url)
         query_params = parse_qs(parsed_url.query)
@@ -104,7 +106,11 @@ def download_file(model_id: str, output_path: str, token: str):
             if not filename:
                 raise Exception('Unable to determine filename')
 
-        response = urllib.request.urlopen(urllib.request.Request(redirect_url))
+        # R2 URLs reject Authorization header, B2 URLs need it
+        if 'r2.cloudflarestorage.com' in redirect_url:
+            response = urllib.request.urlopen(urllib.request.Request(redirect_url))
+        else:
+            response = urllib.request.urlopen(urllib.request.Request(redirect_url, headers=headers))
     elif response.status == 404:
         raise Exception('File not found')
     else:
